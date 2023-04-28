@@ -1,0 +1,52 @@
+// import React from 'react'
+// import { useEffect, useState } from 'react'
+
+// export default function UseEffect() {
+
+//  const [counter, setCounter] = useState(0);
+//  useEffect ( () => {
+//     console.warn("Button Clicked");
+// })
+
+//  function ClickedHandle (){
+// setCounter(counter + 1);
+//  }
+
+//   return (
+//     <div>
+//       <h1>Button Clicked {counter} Times </h1>
+//       <h3>
+//         <button onClick={ClickedHandle}>Use Effect Clicked</button>
+//       </h3>
+//     </div>
+//   )
+// }
+
+
+
+
+import React from 'react'
+import { useEffect,useState } from 'react'
+
+export default function UseEffect() {
+const [count, setCount] = useState(0);
+
+useEffect(() => {
+  console.log("Clicked");
+})
+
+
+
+function OnClick (){
+  setCount(count + 1);
+}
+
+
+
+  return (
+    <div>
+      <h1>Button Clicked =  {count} times...</h1>
+      <h3><button onClick={OnClick}>Click Me</button></h3>
+    </div>
+  )
+}
